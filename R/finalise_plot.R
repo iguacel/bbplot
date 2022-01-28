@@ -1,5 +1,6 @@
 
 font <- "Marcin Ant B"
+width <- 335
 
 save_plot <- function (plot_grid, width, height, save_filepath) {
   grid::grid.draw(plot_grid)
@@ -53,8 +54,8 @@ create_footer <- function (source_name, logo_image_path) {
 finalise_plot <- function(plot_name,
                           source_name,
                           save_filepath=file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
-                          width_pixels=640,
-                          height_pixels=450,
+                          width_pixels=width,
+                          height_pixels=width * 1.5,
                           logo_image_path = file.path(system.file("data", package = 'bbplot'),"placeholder.png")) {
 
   footer <- create_footer(source_name, logo_image_path)
