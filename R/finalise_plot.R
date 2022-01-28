@@ -19,8 +19,7 @@ left_align <- function(plot_name, pieces){
 
 create_footer <- function (source_name) {
   #Make the footer
-  footer <- grid::grobTree(grid::linesGrob(x = grid::unit(c(0, 1), "npc"), y = grid::unit(1.1, "npc")),
-                           grid::textGrob(source_name,
+  footer <- grid::grobTree(grid::textGrob(source_name,
                                           x = 0.004, hjust = 0, gp = grid::gpar(fontfamily=font, fontsize=14, alpha=0.4)))
   return(footer)
 
