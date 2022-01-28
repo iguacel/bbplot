@@ -1,4 +1,5 @@
 
+font <- "Marcin Ant B"
 
 save_plot <- function (plot_grid, width, height, save_filepath) {
   grid::grid.draw(plot_grid)
@@ -19,7 +20,7 @@ create_footer <- function (source_name, logo_image_path) {
   #Make the footer
   footer <- grid::grobTree(grid::linesGrob(x = grid::unit(c(0, 1), "npc"), y = grid::unit(1.1, "npc")),
                            grid::textGrob(source_name,
-                                          x = 0.004, hjust = 0, gp = grid::gpar(fontsize=16)),
+                                          x = 0.004, hjust = 0, gp = grid::gpar(fontsize=14, alpha=0.4)),
                            grid::rasterGrob(png::readPNG(logo_image_path), x = 0.944))
   return(footer)
 
