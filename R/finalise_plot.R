@@ -2,11 +2,11 @@
 font <- "Marcin Ant B"
 width <- 335
 
-save_plot <- function (plot_grid, width, height, save_filepath) {
+save_plot <- function(plot_grid, width, height, save_filepath) {
   grid::grid.draw(plot_grid)
   #save it
   ggplot2::ggsave(filename = save_filepath,
-                  plot=plot_grid, width=(width/72), height=(height/72),  bg="white")
+                  plot = plot_grid, width = (width/72), height = (height/72),  bg = "white")
 }
 
 #Left align text
@@ -17,10 +17,10 @@ left_align <- function(plot_name, pieces){
   return(grob)
 }
 
-create_footer <- function (source_name) {
+create_footer <- function(source_name) {
   #Make the footer
   footer <- grid::grobTree(grid::textGrob(source_name,
-                                          x = 0.004, hjust = 0, gp = grid::gpar(fontfamily=font, fontsize=14, alpha=0.4)))
+                                          x = 0.004, hjust = 0, gp = grid::gpar(fontfamily = font, fontsize = 14, alpha = 0.4)))
   return(footer)
 
 }

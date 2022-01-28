@@ -4,9 +4,13 @@
 \alias{finalise_plot}
 \title{Arrange alignment and save BBC ggplot chart}
 \usage{
-finalise_plot(plot_name, source_name, save_filepath, width_pixels = 640,
-  height_pixels = 450, logo_image_path = file.path(system.file("data",
-  package = "bbcggplotr"), "bbc_blocks_r.png"))
+finalise_plot(
+  plot_name,
+  source_name,
+  save_filepath = file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
+  width_pixels = width,
+  height_pixels = width * 1.5
+)
 }
 \arguments{
 \item{plot_name}{The variable name of the plot you have created that you want to format and save}
@@ -18,9 +22,9 @@ finalise_plot(plot_name, source_name, save_filepath, width_pixels = 640,
 \item{width_pixels}{Width in pixels that you want to save your chart to - defaults to 640}
 
 \item{height_pixels}{Height in pixels that you want to save your chart to - defaults to 450}
-
-\item{logo_image_path}{File path for the logo image you want to use in the right hand side of your chart,
-which needs to be a PNG file - defaults to BBC blocks image that sits within the data folder of your package}
+}
+\value{
+(Invisibly) an updated ggplot object.
 }
 \description{
 Running this function will save your plot with the correct guidelines for publication for a BBC News graphic.
@@ -31,8 +35,7 @@ finalise_plot(plot_name = myplot,
 source = "The source for my data",
 save_filepath = "filename_that_my_plot_should_be_saved_to-nc.png",
 width_pixels = 640,
-height_pixels = 450,
-logo_image_path = "logo_image_filepath.png"
+height_pixels = 450
 )
 
 }
