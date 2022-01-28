@@ -10,7 +10,7 @@
 #' bbc_style()
 
 bbc_style <- function() {
-  font <- "Marcin Ant B"
+  font <- "MarcinAntB"
 
   ggplot2::theme(
 
