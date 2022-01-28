@@ -10,19 +10,19 @@
 #' bbc_style()
 
 bbc_style <- function() {
-  font <- "Helvetica"
+  font <- "Marcin Ant B"
 
   ggplot2::theme(
 
   #Text format:
   #This sets the font, size, type and colour of text for the chart's title
   plot.title = ggplot2::element_text(family=font,
-                            size=28,
+                            size=21,
                             face="bold",
-                            color="#222222"),
+                            color="#191919"),
   #This sets the font, size, type and colour of text for the chart's subtitle, as well as setting a margin between the title and the subtitle
   plot.subtitle = ggplot2::element_text(family=font,
-                               size=22,
+                               size=17,
                                margin=ggplot2::margin(9,0,9,0)),
   plot.caption = ggplot2::element_blank(),
   #This leaves the caption text element empty, because it is set elsewhere in the finalise plot function
@@ -35,15 +35,15 @@ bbc_style <- function() {
   legend.title = ggplot2::element_blank(),
   legend.key = ggplot2::element_blank(),
   legend.text = ggplot2::element_text(family=font,
-                             size=18,
-                             color="#222222"),
+                             size=16,
+                             color="#191919"),
 
   #Axis format
   #This sets the text font, size and colour for the axis test, as well as setting the margins and removes lines and ticks. In some cases, axis lines and axis ticks are things we would want to have in the chart - the cookbook shows examples of how to do so.
   axis.title = ggplot2::element_blank(),
   axis.text = ggplot2::element_text(family=font,
-                           size=18,
-                           color="#222222"),
+                           size=16,
+                           color="#191919"),
   axis.text.x = ggplot2::element_text(margin=ggplot2::margin(5, b = 10)),
   axis.ticks = ggplot2::element_blank(),
   axis.line = ggplot2::element_blank(),
